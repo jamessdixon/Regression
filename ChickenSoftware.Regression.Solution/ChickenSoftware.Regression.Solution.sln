@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChickenSoftware.Regression.CS", "ChickenSoftware.Regression.CS\ChickenSoftware.Regression.CS.csproj", "{BF098D57-ECA4-493C-BF08-235E6F965DDE}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ChickenSoftware.Regression.FS", "ChickenSoftware.Regression.FS\ChickenSoftware.Regression.FS.fsproj", "{EBB5133D-47BF-457D-A381-F87F1FB464FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChickenSoftware.Regression.Tests", "ChickenSoftware.Regression.Tests\ChickenSoftware.Regression.Tests.csproj", "{D4F2893D-ECDE-450B-8A31-9619A7B44000}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF098D57-ECA4-493C-BF08-235E6F965DDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF098D57-ECA4-493C-BF08-235E6F965DDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF098D57-ECA4-493C-BF08-235E6F965DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF098D57-ECA4-493C-BF08-235E6F965DDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBB5133D-47BF-457D-A381-F87F1FB464FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB5133D-47BF-457D-A381-F87F1FB464FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB5133D-47BF-457D-A381-F87F1FB464FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBB5133D-47BF-457D-A381-F87F1FB464FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4F2893D-ECDE-450B-8A31-9619A7B44000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4F2893D-ECDE-450B-8A31-9619A7B44000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4F2893D-ECDE-450B-8A31-9619A7B44000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4F2893D-ECDE-450B-8A31-9619A7B44000}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

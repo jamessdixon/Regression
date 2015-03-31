@@ -1,0 +1,66 @@
+1) Removed Main
+2) Removed commented code    
+3) Pull multi out from file
+
+
+
+static void Main(string[] args)
+    {
+      Console.WriteLine("\nBegin multi-class logistic regression classification demo");
+
+      int numFeatures = 4;
+      int numClasses = 3;
+      int numRows = 1000;
+      Console.WriteLine("\nGenerating " + numRows +
+        " artificial data items with " + numFeatures + " features");
+      double[][] data = MakeDummyData(numFeatures, numClasses, numRows, 0);
+
+      Console.WriteLine("Splitting data to train (80%) and test matrices");
+      double[][] trainData;
+      double[][] testData;
+      SplitTrainTest(data, 0.80, 7, out trainData, out testData);
+      Console.WriteLine("Done");
+
+      Console.WriteLine("\nTraining data: \n");
+      ShowData(trainData, 3, 2, true);
+
+      Console.WriteLine("\nTest data: \n");
+      ShowData(testData, 3, 2, true);
+
+      Console.WriteLine("Creating multi-class LR classifier");
+      LogisticMulti lc = new LogisticMulti(numFeatures, numClasses);
+
+      int maxEpochs = 100; // 
+      Console.WriteLine("Setting training maxEpochs = " +
+        maxEpochs);
+      double learnRate = 0.01;
+      Console.WriteLine("Setting learning rate      = " +
+        learnRate.ToString("F2"));
+      double decay = 0.10;
+      Console.WriteLine("Setting weight decay       = " +
+        decay.ToString("F2"));
+
+      Console.WriteLine("\nStarting training using (batch) gradient descent\n"); 
+      lc.Train(trainData, maxEpochs, learnRate, decay);
+      Console.WriteLine("\nDone\n");
+
+      double[][] bestWts = lc.GetWeights();
+      double[] bestBiases = lc.GetBiases();
+
+      Console.WriteLine("Best weights found:");
+      ShowData(bestWts, bestWts.Length, 3, true);
+
+      Console.WriteLine("Best biases found:");
+      ShowVector(bestBiases, 3, true);
+
+      double trainAcc = lc.Accuracy(trainData);
+      Console.WriteLine("Prediction accuracy on training data = " +
+        trainAcc.ToString("F4"));
+
+      double testAcc = lc.Accuracy(testData);
+      Console.WriteLine("Prediction accuracy on test data     = " +
+        testAcc.ToString("F4"));
+
+      Console.WriteLine("\nEnd demo\n");
+      Console.ReadLine();
+    } // Main
